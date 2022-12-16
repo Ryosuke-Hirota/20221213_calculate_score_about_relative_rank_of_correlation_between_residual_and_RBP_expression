@@ -147,6 +147,10 @@ for (i in 1:length(cutoff)) {
 pp.lists <-list.files(path="C:/Rdata/20221213_calculate_score_about_relative_rank_of_correlation_between_residual_and_RBP_expression",pattern = "pvalue_of_positive")
 np.lists <-list.files(path = "C:/Rdata/20221213_calculate_score_about_relative_rank_of_correlation_between_residual_and_RBP_expression",pattern = "pvalue_of_negative")
 
+# change order of list
+pp.lists <-pp.lists[c(1,10,2:9,11:19)]
+np.lists <-np.lists[c(1,10,2:9,11:19)]
+
 # calculate score
 for (i in 1:length(cutoff)) {
   # import lists of pvalue
